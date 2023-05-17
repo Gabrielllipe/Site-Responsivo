@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    background-color: #929292;
+    color: #fff;
+    padding: 16px;
+}
+li{
+    list-style: none;
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    display: flex;
+}
+
+.sobre{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+}
+.sobre p{
+    margin: 30px 0 0 25px;
+}
+.sobre h2{
+    margin-left: 25px;
+    padding-bottom: 10px;
+    border-bottom: #929292 solid 2px;
+}
+
+.produtos h2{
+    margin-bottom: 25px;
+    border-bottom: #929292 solid 2px;
+}
+.produtos{
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+.produtosgrid{
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    gap: 30px 1%;
+}
+.produtosgrid img{
+    max-width: 100%;
+}
+.produto h3{
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+.produto button{
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:1023px){
+    .sobre{
+        display: block;
+    }
+    .sobre img{
+        width: 100%;
+    }
+    .sobre h2{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .sobre p{
+        margin: 25px 0 0 0;
+    }
+    .produtosgrid{
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+    .produtosgrid img{
+        width: 100%;
+    }
+    .produto button{
+        padding: 10px;
+    }
+    .container{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width:640px){
+    .produtosgrid{
+        grid-template-columns: 100%;
+    }
+    ul{
+        display: block;
+    }
+    header .container{
+        padding: 0;
+    }
+}
